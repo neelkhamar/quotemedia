@@ -1,0 +1,168 @@
+QMod demo
+
+**Please ensure the website you plan to implement uses HTTPS**
+
+To implement a QMod module,
+Paste the module and its style code first (div tag and style tag) and the JavaScript QMod loader at some point in the
+page after the module. (script tag)
+You can have as much QMods on one page as you want.
+But there can be only one loader script on one page.
+
+For example:
+<div data-qmod-tool="detailedquotetab" data-qmod-params='{
+        "lang":"en",
+        "symbol":"GOOGL"
+    }' class="qtool"></div>
+<style>
+</style>
+
+<script id="qmod" type="application/javascript" src="https://qmod.quotemedia.com/js/qmodLoader.js"
+    data-qmod-wmid="92583"></script>
+
+More information on QMOD can be found here
+
+QMod Developer Kit
+https://quotemediasupport.freshdesk.com/solution/folders/13000004685
+
+:::NOTE Regards your tabbed QMod version:::
+There are more than one loader script needed to bring the tabbed version to run.
+:::NOTE END:::
+
+------------------------------------------------------------
+Below you will find the code used on the demo pages
+------------------------------------------------------------
+
+<!-- Qmod detailedquotetabchart START -->
+<div data-qmod-tool="detailedquotetabchart"
+    data-qmod-params='{"symbol":"GOOGL","lang":"en","chln":"005ba6","chfill":"005ba6","chfill2":"f2f2f2","chscale":"5d"}'
+    class="qtool"></div>
+<style>
+    div[data-qmod-tool="detailedquotetabchart"] {
+        font-family: "source sans pro", arial, helvetica, sans-serif;
+        font-size: 1.0rem;
+        color: #555;
+    }
+
+    div[data-qmod-tool="detailedquotetabchart"] a {
+        text-decoration: none;
+    }
+
+    div[data-qmod-tool="detailedquotetabchart"] .qmod-block-wrapper,
+    div[data-qmod-tool="detailedquotetabchart"] .pure-g [class*="pure-u"] {
+        font-family: "source sans pro", arial, helvetica, sans-serif;
+        font-size: 1.0rem;
+        line-height: 1.5;
+    }
+
+    div[data-qmod-tool="detailedquotetabchart"] .qmod-heading.qmod-hbg {
+        font-family: "source sans pro", arial, helvetica, sans-serif;
+        background-color: #fff;
+        text-transform: uppercase;
+        padding: 0.75rem;
+        font-size: 21px;
+        font-weight: 700;
+        color: #555;
+    }
+
+    div[data-qmod-tool="detailedquotetabchart"] .qmod-detailedquote .qmod-quotehead .qmod-head-left {
+        margin-top: 2px;
+    }
+
+    div[data-qmod-tool="detailedquotetabchart"] .qmod-detailedquote .qmod-quotehead .qmod-mkt-hours .qmod-last,
+    .qmod-detailedquote .qmod-quotehead .qmod-mkt-hours .qmod-change {
+        font-size: 140%;
+        line-height: 1.5;
+    }
+
+    div[data-qmod-tool="detailedquotetabchart"] .qmod-detailedquote .qmod-quotehead .qmod-change-icon.fa:hover,
+    div[data-qmod-tool="detailedquotetabchart"] .qmod-detailedquote .qmod-quotehead .qmod-change-icon.fa {
+        color: inherit;
+        font-size: inherit;
+    }
+
+    /*div[data-qmod-tool="detailedquotetabchart"] .qmod-detailedquote .qmod-chart .qmod-button-group li:first-child button, 
+div[data-qmod-tool="detailedquotetabchart"] .qmod-detailedquote .qmod-chart .qmod-button-group li:last-child button,
+div[data-qmod-tool="detailedquotetabchart"] .qmod-chart .qmod-btn {
+    background: rgba(12,107,185,.8);
+    border: 1px solid #0c6bb9;
+    color: #fff;
+    text-shadow: 0 1px 1px #0c6bb9;
+    border-radius: 3px;
+    padding: 5px 10px;
+}*/
+
+    div[data-qmod-tool="detailedquotetabchart"] .qmod-detailedquote .qmod-chart .qmod-button-group li:first-child button,
+    div[data-qmod-tool="detailedquotetabchart"] .qmod-detailedquote .qmod-chart .qmod-button-group li:last-child button {
+        border-radius: 3px;
+    }
+
+    div[data-qmod-tool="detailedquotetabchart"] .qmod-chart .qmod-btn:hover,
+    div[data-qmod-tool="detailedquotetabchart"] .qmod-chart .qmod-btn.qmod-btn-active {
+        background-color: rgba(12, 107, 185, .5);
+        color: #fff;
+    }
+</style>
+<!-- Qmod detailedquotetabchart END -->
+
+<!-- Qmod advChart START -->
+<div class="qmodii">
+    <div id="qmod2" data-qmod-tool="advChart"
+        data-qmod-params='{"symbol":"GOOGL","PropSymbols":"GOOGL,AAPL","lang":"en"}' class="qtool"></div>
+</div>
+<style>
+    .qmodii {
+        padding: 20px 0px 20px 20px;
+    }
+
+    #advChart {
+        font-family: "source sans pro", arial, helvetica, sans-serif;
+        font-size: 15px;
+    }
+
+    #advChart .primary--text {
+        color: rgba(12, 107, 185, .8) !important;
+        caret-color: rgba(12, 107, 185, .8) !important;
+    }
+
+    #advChart .primary {
+        background-color: rgba(12, 107, 185, .8) !important;
+        border-color: rgba(12, 107, 185, .8) !important;
+    }
+
+    #advChart .secondary {
+        background-color: #666 !important;
+        border-color: #666 !important;
+    }
+
+    #advChart rect.highcharts-point,
+    #advChart rect.highcharts-scrollbar-button,
+    #advChart rect.highcharts-scrollbar-thumb {
+        fill: rgba(12, 107, 185, .8);
+    }
+
+    #advChart .theme--dark.v-tabs__bar {
+        background-color: rgba(12, 107, 185, .8) !important;
+    }
+</style>
+<script>
+    window.addEventListener('QMOD:LOADER:FINISHED', function () {
+        // qMod has been loaded and is ready for interaction
+        var qmodWMID = 92583;
+        var qmodComponentDOM = '#qmod2'; // The ID of the DOM object(DIV) you wish to inject into.
+        var qmodComponentName = "advChart"; // The Component Name of the qMod Component you wish to inject.
+        var qmodComponentOptions = { "symbol": "GOOGL", "PropSymbols": "GOOGL,AAPL", "lang": "en" }; // The Component Options of the qMod Component you wish to configure.
+
+        // Call qMod.qModii() with the options you provided.
+        qModii.init(qmodWMID, qmodComponentDOM, qmodComponentName, qmodComponentOptions)
+    });
+</script>
+<script id="qmodiiLoader" src="//qmod.quotemedia.com/static/qmodii/loader.js" type="application/javascript"
+    data-qmod-wmid="92583"></script>
+<!-- Qmod advChart END -->
+
+
+
+
+<!-- QMod Loader Script (Required ONCE on each page that contains one or more QMods) -->
+<script id="qmod" type="application/javascript" src="https://qmod.quotemedia.com/js/qmodLoader.js"
+    data-qmod-wmid="92583"></script>
